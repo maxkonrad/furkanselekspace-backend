@@ -20,7 +20,7 @@ app.use('/posts', router)
 app.use('/banners', bannerRouter)
 app.use('/admins', adminRouter)
 
-app.listen("https://furkanselek-backend.herokuapp.com/", () => {
+app.listen(process.env.PORT, () => {
     mongoose.connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
